@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static ru.levkharitonov.kontur.intern.Converter.*;
 
 /*
@@ -23,7 +22,7 @@ public class ConverterTest {
     private Graph conversions;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         conversions = new Graph();
         readConversions(conversions, "src/test/test.csv");
     }

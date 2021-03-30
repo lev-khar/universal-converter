@@ -1,8 +1,8 @@
 package ru.levkharitonov.kontur.intern;
 
 public class Edge {
-    private String destination;
-    private Double weight;
+    private final String destination;
+    private final Double weight;
 
     public Edge(String destination, Double weight) {
         this.destination = destination;
@@ -13,15 +13,7 @@ public class Edge {
         return destination;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
     public Double getWeight() {
         return weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
     }
 }

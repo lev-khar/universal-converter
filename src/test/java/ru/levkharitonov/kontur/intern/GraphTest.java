@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /*
  * This set of tests checks simple measuring units conversions
  * and correctness of conversion graph building
@@ -19,7 +17,7 @@ public class GraphTest {
     private Graph conversions;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         conversions = new Graph();
         for (int i = 0; i < SIZE; i++) {
             conversions.addRecord(FROMS[i], TOS[i], RATES[i]);

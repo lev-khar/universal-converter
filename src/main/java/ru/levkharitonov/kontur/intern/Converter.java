@@ -29,7 +29,7 @@ public class Converter {
         }
     }
     static class ConvertHandler implements HttpHandler {
-        Graph conversions;
+        final Graph conversions;
         public ConvertHandler(Graph conversions) {
             this.conversions = conversions;
         }
@@ -54,11 +54,11 @@ public class Converter {
                 response = formatDouble(convert(from, to, conversions));
                 he.sendResponseHeaders(200, response.length());
             } catch (IllegalArgumentException iae) {
-                he.sendResponseHeaders(400, response.length());
+                he.sendResponseHeaders(400, 0);
             } catch (ArithmeticException ae) {
-                he.sendResponseHeaders(404, response.length());
-            } catch (ParseException e) {
-                he.sendResponseHeaders(520, 0);
+                he.sendResponseHeaders(404, 0);
+            } catch (ParseException pe) {
+                he.sendResponseHeaders(400, 0);
             } finally {
                 OutputStream os = he.getResponseBody();
                 os.write(response.getBytes());
