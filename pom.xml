@@ -49,7 +49,6 @@
                             <mainClass>ru.levkharitonov.kontur.intern.Converter</mainClass>
                         </manifest>
                     </archive>
-                    <outputDirectory>./</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
